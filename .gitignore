@@ -1,0 +1,13 @@
+# Neovim
+/.lazy/
+/plugin/
+/spell/
+/shada/
+/undo/
+/swap/
+/backup/
+
+# Node
+node_modules/
+
+
