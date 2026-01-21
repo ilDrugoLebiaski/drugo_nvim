@@ -26,4 +26,8 @@ vim.g.python3_host_prog = "/home/ildrugo/.config/nvim/venv/bin/python"
 
 
 require("vim-options")
-require("lazy").setup("plugins")
+require("lazy").setup("plugins", {
+  git = {
+    url_format = "https://github.com/%s.git",
+  },
+})
