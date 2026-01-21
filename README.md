@@ -33,4 +33,10 @@ Configurazione personale di **Neovim**.
 - vim_surround
 - which_key
 
-### work in progress...
+## TO DO:
+
+- Write simple installation scripts, for _minimal config_ and for _all plugins config_;
+
+- Add descriptions for all keymaps;
+
+- ...
