@@ -8,6 +8,6 @@ return {
         auto_install = true
     },
     config = function(_, opts)
-        local config = require("nvim-treesitter.configs").setup(opts)
+        local config = require("nvim-treesitter").setup(opts)
     end
 }
