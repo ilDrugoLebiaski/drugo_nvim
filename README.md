@@ -8,32 +8,32 @@ Neovim custom configuration optimized for development in C, Python, Java, JavaSc
 
 ## Plugin and Features:
 
-- ['Autopairs'](https://github.com/windwp/nvim-autopairs)
-- ['Catppuccin'](https://github.com/catppuccin/nvim)
-- ['Comment'](https://github.com/numToStr/Comment.nvim)
-- ['Completions'](https://github.com/hrsh7th/cmp-nvim-lsp)
-- ['Dashbord'](https://github.com/nvimdev/dashboard-nvim)
-- ['Git Signs'](https://github.com/lewis6991/gitsigns.nvim)
-- ['Harpoon'](https://github.com/ThePrimeagen/harpoon)
-- ['Indent Blankline'](https://github.com/lukas-reineke/indent-blankline.nvim)
-- ['Mason'](https://github.com/williamboman/mason.nvim)
-- ['Lsp Config'](https://github.com/neovim/nvim-lspconfig)
-- ['Mason Lsp'](williamboman/mason-lspconfig.nvim)
-- ['Markdown Preview'](https://github.com/iamcco/markdown-preview.nvim)
-- ['Mini'](https://github.com/nvim-mini/mini.icons)
-- ['None-ls'](https://github.com/nvimtools/none-ls.nvim)
-- ['Noice'](https://github.com/folke/noice.nvim)
-- ['Neo-Tree'](https://github.com/nvim-neo-tree/neo-tree.nvim)
-- ['Nvim Dap'](https://github.com/mfussenegger/nvim-dap)
-- ['NvimLine'](https://github.com/nvim-lualine/lualine.nvim)
-- ['Project'](https://github.com/ahmedkhalf/project.nvim)
-- ['Telescope'](https://github.com/nvim-telescope/telescope.nvim)
-- ['ToDo Comments'](https://github.com/folke/todo-comments.nvim)
-- ['Toggle Term'](https://github.com/akinsho/toggleterm.nvim)
-- ['Treesitter'](https://github.com/nvim-treesitter/nvim-treesitter)
-- ['UFO'](https://github.com/kevinhwang91/nvim-ufo)
-- ['Vim Surround'](https://github.com/tpope/vim-surround")
-- ['Which Key'](https://github.com/folke/which-key.nvim)
+- [`Autopairs`](https://github.com/windwp/nvim-autopairs)
+- [`Catppuccin`](https://github.com/catppuccin/nvim)
+- [`Comment`](https://github.com/numToStr/Comment.nvim)
+- [`Completions`](https://github.com/hrsh7th/cmp-nvim-lsp)
+- [`Dashbord`](https://github.com/nvimdev/dashboard-nvim)
+- [`Git Signs`](https://github.com/lewis6991/gitsigns.nvim)
+- [`Harpoon`](https://github.com/ThePrimeagen/harpoon)
+- [`Indent Blankline`](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [`Mason`](https://github.com/williamboman/mason.nvim)
+- [`Lsp Config`](https://github.com/neovim/nvim-lspconfig)
+- [`Mason Lsp`](williamboman/mason-lspconfig.nvim)
+- [`Markdown Preview`](https://github.com/iamcco/markdown-preview.nvim)
+- [`Mini`](https://github.com/nvim-mini/mini.icons)
+- [`None-ls`](https://github.com/nvimtools/none-ls.nvim)
+- [`Noice`](https://github.com/folke/noice.nvim)
+- [`Neo-Tree`](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- [`Nvim Dap`](https://github.com/mfussenegger/nvim-dap)
+- [`NvimLine`](https://github.com/nvim-lualine/lualine.nvim)
+- [`Project`](https://github.com/ahmedkhalf/project.nvim)
+- [`Telescope`](https://github.com/nvim-telescope/telescope.nvim)
+- [`ToDo Comments`](https://github.com/folke/todo-comments.nvim)
+- [`Toggle Term`](https://github.com/akinsho/toggleterm.nvim)
+- [`Treesitter`](https://github.com/nvim-treesitter/nvim-treesitter)
+- [`UFO`](https://github.com/kevinhwang91/nvim-ufo)
+- [`Vim Surround`](https://github.com/tpope/vim-surround")
+- [`Which Key`](https://github.com/folke/which-key.nvim)
 
 Each plugin has its own configuration file to make maintenance easy.
 The configuration files are organized in `lua/plugins/`.
@@ -91,7 +91,7 @@ The configuration files are organized in `lua/plugins/`.
         mv ~/.config/nvim ~/.config/nvim.backup
 
         # Clone this repo:
-        git clone https://github.com/ilDrugoLebiaski/nvim-config.git ~/.config/nvim
+        git clone https://github.com/ilDrugoLebiaski/drugo_nvim.git ~/.config/nvim
 
         # Launch Neovim (plugins will install automatically)
         nvim
