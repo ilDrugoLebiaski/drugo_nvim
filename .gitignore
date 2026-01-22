@@ -7,7 +7,29 @@
 /swap/
 /backup/
 
+# Lazy.nvim lockfile
+# NOTA: Committa lazy-lock.json per garantire versioni identiche dei plugin
+# Decommenta la riga sotto se preferisci usare sempre le ultime versioni
+lazy-lock.json
+
+# Session files
+/session/
+*.session
+
+# Log files
+*.log
+debug.log
+lsp.log
+
 # Node
 node_modules/
 
+# OS files
+.DS_Store
+Thumbs.db
 
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
