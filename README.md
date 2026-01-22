@@ -91,7 +91,7 @@ The configuration files are organized in `lua/plugins/`.
         mv ~/.config/nvim ~/.config/nvim.backup
 
         # Clone this repo:
-        git clone https://github.com/TUO_USERNAME/nvim-config.git ~/.config/nvim
+        git clone https://github.com/ilDrugoLebiaski/nvim-config.git ~/.config/nvim
 
         # Launch Neovim (plugins will install automatically)
         nvim
