@@ -18,7 +18,7 @@ Neovim custom configuration optimized for development in C, Python, Java, JavaSc
 - [`Indent Blankline`](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [`Mason`](https://github.com/williamboman/mason.nvim)
 - [`Lsp Config`](https://github.com/neovim/nvim-lspconfig)
-- [`Mason Lsp`](williamboman/mason-lspconfig.nvim)
+- [`Mason Lsp`](https://github.com/williamboman/mason-lspconfig.nvim)
 - [`Markdown Preview`](https://github.com/iamcco/markdown-preview.nvim)
 - [`Mini`](https://github.com/nvim-mini/mini.icons)
 - [`None-ls`](https://github.com/nvimtools/none-ls.nvim)
@@ -32,7 +32,7 @@ Neovim custom configuration optimized for development in C, Python, Java, JavaSc
 - [`Toggle Term`](https://github.com/akinsho/toggleterm.nvim)
 - [`Treesitter`](https://github.com/nvim-treesitter/nvim-treesitter)
 - [`UFO`](https://github.com/kevinhwang91/nvim-ufo)
-- [`Vim Surround`](https://github.com/tpope/vim-surround")
+- [`Vim Surround`](https://github.com/tpope/vim-surround)
 - [`Which Key`](https://github.com/folke/which-key.nvim)
 
 Each plugin has its own configuration file to make maintenance easy.
@@ -47,7 +47,7 @@ The configuration files are organized in `lua/plugins/`.
   Modern syntax parsing. Better highlighting, better indentation, better understanding of code structure.
 
 - **LSP (nvim-lspconfig + Mason + Mason-lspconfig)**
-  Language intelligence: completion, diagnostics, refactoring, ecc. Mason handles installation, LSP does the real work;
+  Language intelligence: completion, diagnostics, refactoring, etc. Mason handles installation, LSP does the real work;
 
 - **Completions (nvim-cmp)**
   Context-aware autocompletion powered by LSP;
@@ -85,13 +85,47 @@ The configuration files are organized in `lua/plugins/`.
 - **Todo-comments**
   Makes TODO, FIXME, NOTE visible and searchable across the project;
 
-## Installation:
+This configuration aims to provide an IDE-like experience
+while preserving Neovim’s speed, composability and control.
 
-        # Backup of previousconfiguration:
+## Requirements
+
+Minimal setup required to run this configuration.
+
+- Neovim ≥ 0.9
+- Git
+- Node.js ≥ 18
+- Python ≥ 3.9
+- C compiler (gcc / clang)
+
+Optional but strongly recommended tools:
+
+- ripgrep
+- fd
+- make
+- npm / yarn / pnpm
+
+## Manual Installation:
+
+        # Backup of previous configuration:
         mv ~/.config/nvim ~/.config/nvim.backup
 
         # Clone this repo:
         git clone https://github.com/ilDrugoLebiaski/drugo_nvim.git ~/.config/nvim
 
-        # Launch Neovim (plugins will install automatically)
+        # Install anb build plugins
+        nvim --headless "+Lazy! sync" +qa
+
+        # Update Treesitter
+        nvim --headless "+TSUpdate" +qa
+
+        # Launch Neovim
         nvim
+
+### Note: First opening could require some time...
+
+## Work in Progress:
+
+- I'm currently working on a one-line bash installation script;
+
+- I'm also adding descriptions for all plugin shortcuts to make `which-key` more useful;
