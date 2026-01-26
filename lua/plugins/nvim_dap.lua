@@ -53,10 +53,9 @@ return {
     --------------------------------------------------------------
     ---4. keymap
     -----------------------------------------------------------
-
-    vim.keymap.set("n", "<Leader>dt", ":DapToggleBreakpoint<CR>")
-    vim.keymap.set("n", "<Leader>dc", ":DapContinue<CR>")
-    vim.keymap.set("n", "<Leader>dx", ":DapTerminate<CR>")
-    vim.keymap.set("n", "<Leader>do", ":DapStepOver<CR>")
+    vim.keymap.set("n", "<Leader>di", ":DapStepInto<CR>", { desc = "DAP: Step into" })
+    vim.keymap.set("n", "<Leader>du", ":DapStepOut<CR>", { desc = "DAP: Step out" })
+    vim.keymap.set("n", "<Leader>dr", ":DapToggleRepl<CR>", { desc = "DAP: Toggle REPL" })
+    vim.keymap.set("n", "<Leader>dl", ":DapShowLog<CR>", { desc = "DAP: Show log" })
   end,
 }
