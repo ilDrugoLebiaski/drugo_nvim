@@ -113,7 +113,7 @@ Optional but strongly recommended tools:
         # Clone this repo:
         git clone https://github.com/ilDrugoLebiaski/drugo_nvim.git ~/.config/nvim
 
-        # Install anb build plugins
+        # Install and build plugins
         nvim --headless "+Lazy! sync" +qa
 
         # Update Treesitter
