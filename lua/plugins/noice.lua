@@ -15,11 +15,11 @@ return {
         },
       },
       presets = {
-        bottom_search = true, -- Usa cmdline classica per search
-        command_palette = false, -- DISABILITATO - cmdline rimane in basso
-        long_message_to_split = true, -- Messaggi lunghi in split
+        bottom_search = true,
+        command_palette = false,
+        long_message_to_split = true,
         inc_rename = false,
-        lsp_doc_border = true, -- Bordi per hover docs
+        lsp_doc_border = true,
       },
       routes = {
         {
