@@ -1,6 +1,15 @@
 return {
 
   "numToStr/Comment.nvim",
+  keys = {
+    { "gcc", mode = "n", desc = "Comment: Toggle line" },
+    { "gbc", mode = "n", desc = "Comment: Toggle block" },
+    { "gc", mode = { "n", "v" }, desc = "Comment: Toggle line (operator)" },
+    { "gb", mode = { "n", "v" }, desc = "Comment: Toggle block (operator)" },
+    { "gcO", mode = "n", desc = "Comment: Add above" },
+    { "gco", mode = "n", desc = "Comment: Add below" },
+    { "gcA", mode = "n", desc = "Comment: Add end of line" },
+  },
 
   config = function()
     local comment = require("Comment")
