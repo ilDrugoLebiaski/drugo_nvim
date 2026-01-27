@@ -2,45 +2,116 @@ return {
   "folke/which-key.nvim",
   event = "VeryLazy",
   opts = {
-    -- In v3, le icone e il layout si configurano così:
-    preset = "classic", -- o "modern" / "helix"
+    preset = "classic",
     spec = {
-      -- Qui aggiungiamo i gruppi e le descrizioni
+      -- Gruppi principali
       { "<leader>f", group = "Find (Telescope)" },
+      { "<leader>g", group = "Git" },
       { "<leader>m", group = "Markdown" },
       { "<leader>h", group = "Harpoon" },
       { "<leader>d", group = "Debug (DAP)" },
       { "<leader>l", group = "LSP" },
+      { "<leader>t", group = "Terminal/Test" },
+      { "<leader>n", group = "Notifications" },
       { "<leader>w", proxy = "<c-w>", group = "Windows" },
-      -- Esempi di comandi
+      { "<leader>z", group = "UFO" },
+      { "<leader>?", group = "Help" },
+
+      -- Markdown shortcuts
       { "<leader>mp", "<cmd>MarkdownPreview<cr>", desc = "Markdown Preview" },
+      { "<leader>ms", "<cmd>MarkdownPreviewStop<cr>", desc = "Markdown Preview Stop" },
+      { "<leader>mt", "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown Preview Toggle" },
+
+      -- Notifications shortcuts
+      { "<leader>nd", desc = "Dismiss all notifications" },
+      { "<leader>nh", desc = "Notification history" },
+      { "<leader>nl", desc = "Last notification" },
+      { "<leader>na", desc = "All notifications" },
+
+      -- System clipboard
       {
         mode = { "n", "v" },
         { "<leader>y", '"+y', desc = "Copy to system clipboard" },
         { "<leader>p", '"+p', desc = "Paste from system clipboard" },
       },
+
+      -- Help commands
+      {
+        "<leader>?c",
+        function()
+          vim.notify(
+            [[
+╭─────────────────────────────────────────────╮
+│  nvim-cmp Keymaps (INSERT mode)             │
+╰─────────────────────────────────────────────╯
+
+Navigation:
+  Tab         Next completion item / Expand snippet
+  Shift+Tab   Previous item / Jump back in snippet
+  Enter       Confirm selection
+
+Control:
+  Ctrl+Space  Trigger completion menu
+  Ctrl+e      Close completion menu
+
+Documentation:
+  Ctrl+b      Scroll documentation up
+  Ctrl+f      Scroll documentation down
+          ]],
+            vim.log.levels.INFO,
+            { title = "Completion Help" }
+          )
+        end,
+        desc = "Show completion keymaps",
+      },
+
+      {
+        "<leader>?m",
+        function()
+          vim.notify(
+            [[
+╭─────────────────────────────────────────────╮
+│  Comment.nvim Keymaps                       │
+╰─────────────────────────────────────────────╯
+
+Toggle (NORMAL):
+  gcc         Toggle line comment
+  gbc         Toggle block comment
+  gc{motion}  Comment with motion (e.g. gcip)
+  gb{motion}  Block comment with motion
+
+Toggle (VISUAL):
+  gc          Toggle line comment
+  gb          Toggle block comment
+
+Add comment:
+  gcO         Add comment above
+  gco         Add comment below
+  gcA         Add comment at end of line
+          ]],
+            vim.log.levels.INFO,
+            { title = "Comment Help" }
+          )
+        end,
+        desc = "Show comment keymaps",
+      },
     },
     win = {
       border = "rounded",
     },
-    -- "show" sostituisce la vecchia gestione loop/hydra in v3
-    expand = 0, -- mostra i sotto-livelli
+    expand = 0,
   },
   keys = {
     {
-      "<leader>?",
+      "<leader>?k",
       function()
         require("which-key").show({ global = false })
       end,
-      desc = "Buffer Local Keymaps (which-key)",
+      desc = "Buffer Local Keymaps",
     },
   },
   config = function(_, opts)
     local wk = require("which-key")
     wk.setup(opts)
-    vim.keymap.set("n", "<leader>?", "<cmd>WhichKey<cr>", { desc = "Search all keymaps" })
-
-    -- Se vuoi usare il vecchio metodo 'add' invece di 'spec' dentro setup:
-    -- wk.add(opts.spec)
   end,
 }
