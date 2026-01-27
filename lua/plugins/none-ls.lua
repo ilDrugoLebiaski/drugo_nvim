@@ -30,12 +30,10 @@ return {
         -- da none-ls-extras
         flake8,
         eslint,
-
+        -- DIAGNOSTICS
         -- builtins
         null_ls.builtins.diagnostics.yamllint,
         null_ls.builtins.diagnostics.markdownlint,
-        -- FLAKE8
-        flake8,
       },
     })
 
