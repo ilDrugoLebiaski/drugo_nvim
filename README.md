@@ -85,6 +85,9 @@ The configuration files are organized in `lua/plugins/`.
 - **Todo-comments**
   Makes TODO, FIXME, NOTE visible and searchable across the project;
 
+- **Nvim Tmux Navigation**
+  Easier navigation between Neovim splits and Tmux panes;
+
 This configuration aims to provide an IDE-like experience
 while preserving Neovim’s speed, composability and control.
 
